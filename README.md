@@ -1,5 +1,5 @@
 # marshmallowcleanup
-A micro-service which takes the area dimensions, the locations of the oil patches, the initial location of the cleaner and the navigation instructions as input and to then outputs the following:  The final cleaner position (X, Y) &amp; The number of patches of oil the robot cleaned up
+A web-service which takes an input of co-ordinates of area dimensions, the locations of the oil patches, the initial location of the cleaner and a string of navigation instructions (NESW) as input and then outputs the following:  The final cleaner position (X, Y) &amp; The number of patches of oil the robot cleaned up.
 
 I used the Spring Tool suite with Eclipse IDE to create and test the code. To build:
 
