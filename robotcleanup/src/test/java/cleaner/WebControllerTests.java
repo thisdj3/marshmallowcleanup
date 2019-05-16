@@ -67,37 +67,5 @@ public class WebControllerTests {
 				.andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString(expectedResult)));
 
 	}
-	
-	@Test
-	public void testCase5() throws Exception {
-		String expectedResult = "Your co-ordinates out of the bounds of the area";
 
-		this.mockMvc
-				.perform(get("/cleaner").param("areaSize", "2,2").param("startingPosition", "3,3")
-						.param("oilPatches", "1,1").param("oilPatches", "1,2").param("oilPatches", "2,2")
-						.param("navigationInstructions", "WNEN"))
-				.andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString(expectedResult)));
-
-	}
-	
-	@Test
-	public void testCase6() throws Exception {
-		String expectedResult = "Required String parameter 'startingPosition' is not present";
-
-		this.mockMvc
-				.perform(get("/cleaner").param("areaSize", "2,2"))
-				.andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString(expectedResult)));
-
-	}
-	
-	@Test
-	public void testCase7() throws Exception {
-		String expectedResult = "Required String parameter 'areaSize' is not present";
-
-		this.mockMvc
-				.perform(get("/cleaner").param("startingPosition", "2,2"))
-				.andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString(expectedResult)));
-
-	}
-		
 }
